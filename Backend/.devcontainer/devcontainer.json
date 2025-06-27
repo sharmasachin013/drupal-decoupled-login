@@ -17,5 +17,5 @@
             "label": "web https"
         }
     },
-    "postCreateCommand": "chmod +x .devcontainer/setup_project.sh && .devcontainer/setup_project.sh"
+    "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/ddev/ddev/master/scripts/install_ddev.sh | bash && chmod +x .devcontainer/setup_project.sh && .devcontainer/setup_project.sh"
 }
