@@ -1,5 +1,6 @@
 {
     "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/ddev/ddev/master/scripts/install_ddev.sh | bash && chmod +x .devcontainer/setup_project.sh && .devcontainer/setup_project.sh",
     "features": {
         "ghcr.io/ddev/ddev/install-ddev:latest": {}
     },
@@ -16,6 +17,6 @@
         "8443": {
             "label": "web https"
         }
-    },
-    "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/ddev/ddev/master/scripts/install_ddev.sh | bash && chmod +x .devcontainer/setup_project.sh && .devcontainer/setup_project.sh"
+    }
+    
 }
