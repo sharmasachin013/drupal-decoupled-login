@@ -1,0 +1,9 @@
+uuid: 94ae0c5b-4520-4c16-a20b-5a0fbc589a48
+langcode: en
+status: true
+dependencies: {  }
+id: oauth
+label: OAuth
+weight: 4
+is_admin: false
+permissions: {  }

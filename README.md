@@ -4,3 +4,5 @@
 
 #  Ctrl+Shift+P → "Codespaces: Rebuild Container"
 
+
+# drush sql-dump | gzip > db.sql.gz
