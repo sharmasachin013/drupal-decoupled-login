@@ -1,0 +1,36 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/ddev/ddev/install-ddev:latest": {}
+  },
+  "portsAttributes": {
+    "3306": {
+      "label": "database"
+    },
+    "8027": {
+      "label": "mailpit"
+    },
+    "8080": {
+      "label": "web http"
+    },
+    "8443": {
+      "label": "web https"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "vscode-icons-team.vscode-icons",
+        "wayou.vscode-todo-highlight",
+        "ritwickdey.LiveServer"
+      ],
+      "settings": {
+        "editor.fontSize": 26,
+        "terminal.integrated.fontSize": 18,
+        "editor.wordWrap": "on"
+      }
+    }
+  },
+  "postCreateCommand": "chmod +x .devcontainer/setup.sh && .devcontainer/setup.sh"
+}
