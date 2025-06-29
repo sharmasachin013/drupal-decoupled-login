@@ -20,13 +20,13 @@ const refreshPromises = [];
 export function getAuthClient(config = {}) {
   const defaultConfig = {
     // Base URL of your Drupal site.
-    base: "https://react-tutorials-2.ddev.site",
+    base: "https://musical-telegram-g45j4gvvv5gfwj9v-80.app.github.dev",
     // Name to use when storing the token in localStorage.
     token_name: "drupal-oauth-token",
     // OAuth client ID - get from Drupal.
     client_id: "cb0379f2-7c9f-48bb-8973-f0f11b6064d5",
     // OAuth client secret - set in Drupal.
-    client_secret: "app",
+   // client_secret: "app",
     // Drupal user role related to this OAuth client.
     scope: "oauth",
     // Margin of time before the current token expires that we should force a
@@ -50,6 +50,7 @@ export function getAuthClient(config = {}) {
     formData.append("scope", config.scope);
     formData.append("username", username);
     formData.append("password", password);
+    console.log(formData.client_id);
     try {
       const response = await fetch(`${config.base}/oauth/token`, {
         method: "post",
